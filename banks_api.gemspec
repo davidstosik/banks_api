@@ -1,16 +1,16 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "banks_api/core/version"
+require "banks_api/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "banks_api-core"
-  spec.version       = BanksApi::Core::VERSION
+  spec.name          = "banks_api"
+  spec.version       = BanksApi::VERSION
   spec.authors       = ["David Stosik"]
   spec.email         = ["david.stosik+git-noreply@gmail.com"]
 
-  spec.summary       = %q{Banks API Core gem}
+  spec.summary       = %q{Banks API gem}
   spec.description   = %q{Core code used by Banks API implementations for banks.}
-  spec.homepage      = "https://github.com/davidstosik/banks_api-core"
+  spec.homepage      = "https://github.com/davidstosik/banks_api"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

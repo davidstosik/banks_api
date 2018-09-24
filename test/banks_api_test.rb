@@ -1,8 +1,8 @@
 require "test_helper"
 
-class BanksApi::CoreTest < Minitest::Test
+class BanksApiTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::BanksApi::Core::VERSION
+    refute_nil ::BanksApi::VERSION
   end
 
   def test_it_does_something_useful
