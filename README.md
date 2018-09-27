@@ -1,5 +1,47 @@
 # Banks API
 
+## Usage
+
+### Authentication
+
+```rb
+require "banks_api-bankname"
+
+user_account = BanksApi::UserAccount.new(
+  "bankname",
+  credential_hash
+)
+```
+
+### Fetching accounts information
+
+A user's account in a bank may have access to multiple bank accounts.
+
+```rb
+bank_accounts = user_account.bank_accounts
+puts bank_accounts.first.inspect
+#<BanksApi::BankName::BankAccount
+  id: "1234567890",
+  description: "...",
+  balance: #<Money fractional:987654 currency:JPY>
+>
+```
+
+### Fetching transactions for a specific bank account
+
+```rb
+transactions = bank_accounts.first.transactions(
+  from: Date.today.prev_month,
+  to: Date.today
+)
+puts transactions.first.inspect
+#<BanksApi::BankName::Transaction
+  date: #<Date: 2018-09-25 ((2458387j,0s,0n),+0s,2299161j)>,
+  description: "a description of the transaction",
+  amount: #<Money fractional:200 currency:JPY>
+>
+```
+
 ## Project
 
 ### Classes
