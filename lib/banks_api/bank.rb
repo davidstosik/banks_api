@@ -1,3 +1,4 @@
+require "single_forwardable"
 require "singleton"
 require "monitor"
 
