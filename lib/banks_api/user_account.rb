@@ -9,6 +9,12 @@ module BanksApi
       @accounts ||= api.fetch_accounts
     end
 
+    def account(id)
+      accounts.find do |account|
+        account.id == id
+      end
+    end
+
     private
 
       attr_reader :bank_name, :credentials
