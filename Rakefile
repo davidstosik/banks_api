@@ -14,7 +14,7 @@ task :build do
 end
 
 task release: :build do
-  system "gem push banks_api-#{BanksApi::VERSION}"
+  system "gem push pkg/banks_api-#{BanksApi::VERSION}.gem"
 end
 
 task :default => :test
