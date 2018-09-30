@@ -1,6 +1,6 @@
-require "single_forwardable"
-require "singleton"
+require "forwardable"
 require "monitor"
+require "singleton"
 
 module BanksApi
   class Bank
